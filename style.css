@@ -4,6 +4,11 @@ html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a{
+  text-decoration: none;
+  
+}
+
 /* Hero Section */
 .hero {
   height: 100vh;
@@ -34,6 +39,99 @@ html {
 }
 
 /* Skills Section */
+
+.skills {
+  font-weight: bold;
+  margin-bottom: 20px;
+  
+}
+
+.slider-container {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    padding: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden; /* This is crucial: it hides the overflowing content */
+    margin: auto;
+
+    /* Optional: Fading edges for a cleaner look */
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+}
+
+/* The track that holds all the slides and moves */
+.slider-track {
+    display: flex;
+    width: fit-content; /* Makes the track as wide as its content */
+    
+    /* * 1. 'scroll' is the animation name.
+     * 2. '20s' is the duration (how long one loop takes). 
+     * - Make this number larger to slow it down.
+     * - Make it smaller to speed it up.
+     * 3. 'linear' means the speed is constant.
+     * 4. 'infinite' means the animation loops forever.
+     */
+    animation: scroll 20s linear infinite;
+}
+
+/* Optional: Pause animation on hover */
+.slider-container:hover .slider-track {
+    animation-play-state: paused;
+}
+
+/* Individual slide styling */
+.slide {
+    width: 200px; /* Set a fixed width for each slide */
+    margin: 0 20px;
+    display: grid;
+    place-items: center;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* The animation keyframes */
+@keyframes scroll {
+    /* * The animation starts at the beginning (right side)
+     */
+    0% {
+        transform: translateX(0);
+    }
+    
+    /*
+     * It moves to the end (left side).
+     * The value -50% represents exactly half the total track width
+     * (which is the width of one full set of your items).
+     */
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
 .skill-box {
   background: white;
   padding: 20px;
@@ -41,7 +139,26 @@ html {
   font-weight: bold;
   transition: 0.3s;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
 }
+
+.head4 {
+  color: #111;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.skill-box1 {
+  text-align: left;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
 .skill-box:hover {
   background: #17a2b8;
   color: white;
@@ -54,12 +171,116 @@ html {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+.cert-img {
+  
+  text-decoration: none;
+  
+
+}
 
 /* Contact Section */
-.contact {
-  background: #222;
-  padding: 50px 0;
+/* =================================== */
+/* CONTACT SECTION STYLING           */
+/* =================================== */
+
+.contact-section {
+    display: flex; /* Creates the two-column layout */
+    background-color: #222;
+    padding: 2.5rem;
+    border-radius: 0px;
+    margin-top: 2rem; /* Adds space above this section */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+/* logos */
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 20px;
+}
+
+.head5 {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.para {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+} 
+.logo:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+/* Left column styling */
+.contact-left {
+    width: 98%; /* Takes up just under half the space */
+    padding-right: 2rem; /* Space between text and the line */
+    color: #fff;
+    /* === THIS IS THE VERTICAL LINE === */
+    border-right: 2px solid #f0f0f0; 
+}
+
+/* Right column styling */
+.contact-right {
+    width: 98%; /* Takes up just under half the space */
+    padding: 2rem; /* Space between the line and the form */
+    color: #fff;
+}
+
+
+/* Basic Form Styling */
+
+
+.contact-right label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #f4f1f1;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    box-sizing: border-box; /* Fixes padding issues */
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit; /* Uses the main body font */
+    font-size: 1rem;
+}
+
+.contact-right textarea {
+    resize: vertical; /* Allows user to resize height only */
+}
+
+/* Use the existing cta-button style from your homepage */
+.contact-right .cta-button {
+    align-self: flex-start; /* Aligns button to the left */
+    cursor: pointer;
+    background: #222;
+    color: #17a2b8;
+    border: 1px solid #17a2b8;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    background: #17a2b8;
+    color: white;
+}
+    
 
 /* Footer */
 footer {
