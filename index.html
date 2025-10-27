@@ -1,254 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shivanna — Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Shivanna</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+  <!-- NAV -->
+  <nav>
+    <div class="brand">
+      <div class="logo-circle">SM</div>
+      <div>
+        <h1>Shivanna</h1>
+        <div style="font-size:.78rem;color:var(--muted);margin-top:2px">Web Developer • AI Enthusiast</div>
       </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Certificates</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero d-flex align-items-center text-center text-white">
-    <div class="container">
-      <h1>Hello, I'm <span class="text-info">Shivanna</span></h1>
-      <p class="lead">A Passionate Web Developer</p>
-      <a href="#projects" class="btn btn-info btn-lg mt-3">View My Work</a>
-    </div>
-  </section>
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="float-shape float-1"></div>
+    <div class="float-shape float-2"></div>
 
-  <!-- About -->
-  <section id="about" class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-5">
-          <img src="https://res.cloudinary.com/dvf6yetek/image/upload/v1761038983/IMG-20250731-WA0033_ulfz2r.jpg" alt="profile" class="img-fluid rounded shadow mb-4">
+    <div class="hero-inner reveal">
+      <h2>Hi, I’m <span class="accent">Shivanna</span> 👋</h2>
+      <p class="subtle">A passionate Web Developer & AI student — I build simple, beautiful websites and learn AI one project at a time.</p>
+
+      <div class="btns">
+        <a class="btn btn-primary" href="#projects">View My Certificates</a>
+        <a class="btn btn-outline" href="#contact">Contact Me</a>
+      </div>
+
+      <p style="margin-top:12px;color:var(--muted);font-size:.9rem">1st year BTech — NxtWave × Yenepoya collaboration</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+      <div class="section-head">
+        <h3 class="section-title">About Me</h3>
+        <div class="subtle">Learn a little about my background and interests.</div>
+      </div>
+
+      <div class="about-wrap">
+        <div class="about-card">
+          <img class="profile-photo" src="https://res.cloudinary.com/dvf6yetek/image/upload/v1761038983/IMG-20250731-WA0033_ulfz2r.jpg" alt="Shivanna profile">
         </div>
-        <div class="col-lg-7">
-          <h2 class="head4">About Me</h2>
-          <p>I am a Computer Science student who loves building websites and exploring AI. This is my first portfolio website built with HTML, CSS, and Bootstrap.</p>
-          <p> I am Shivanna M I am a 1st year engineering student of Computer Science in specialization AI(Artificial Intelligence) at Nxtwave Institute of Advanced Technology coloboration with Yenepoya School of Engineering and Technology in Mangaluru.  </p>
-          
-           
+
+        <div>
+          <div class="about-card bio">
+            <p><strong>Hi — I’m Shivanna M.</strong> I’m a 1st year Computer Science engineering student specializing in Artificial Intelligence at NxtWave Institute of Advanced Technology in collaboration with Yenepoya School of Engineering and Technology, Mangaluru.</p>
+
+            <p>I enjoy building web interfaces using HTML, CSS, and JavaScript, learning AI concepts, and participating in hackathons and workshops. I’m curious, enjoy teamwork, and love creating designs that are simple and delightful.</p>
+
+            <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+              <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">Bootstrap</span><span class="pill">Python</span><span class="pill">JavaScript</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="bg-light py-5">
-    <div class="container text-center">
-      <h2 class="skills">My Skills</h2>
-      <div class="row mt-4">
-        <div class="col-12 col-lg-6">
-          <h4 class="head4">Technical Skills</h4>
-          <ul>
-            <li> <div class="skill-box1">Front-end web development</div></li>
-            <li><div  class="skill-box1">Microsoft Word, Excel, Power point, Access, MS Office suite.</div></li>
-            <li><div  class="skill-box1">Python programming</div></li>
-            <li><div  class="skill-box1 mb-4">Problem Solving</div></li>
-          </ul>
-          
-        </div>
-        
-        <div class="col-12 col-lg-6">
-          <h4 class="head4">Professional Skills</h4>
-          <ul>
-            <li> <div class="skill-box1">Teamwork and collaboration</div></li>
-            <li><div  class="skill-box1"> leadership</div></li>
-            <li><div  class="skill-box1">Communication</div></li>
-            <li><div  class="skill-box1">Positive attitude</div></li>
-            <li><div  class="skill-box1">Time management</div></li>
-            <li><div  class="skill-box1 mb-4">Analytical Thinking</div></li>
-          </ul>
-          
-        </div>
+    <!-- SKILLS -->
+    <section id="skills" class="reveal">
+      <h3 class="section-title">My Skills</h3>
+      <div class="subtle">Technical & professional skills I use while building projects.</div>
 
-   <div class="slider-container">
-        
-      <h4 class="head4 mb-5"> Programming Languages </h4>
-
-        <div class="slider-track">
-            
-            <div class="slide"><div ><div class="skill-box"> HTML</div></div></div>
-            <div class="slide"><div ><div class="skill-box">CSS</div></div></div>
-            <div class="slide"><div ><div class="skill-box">Bootstrap</div></div></div>
-            <div class="slide"><div ><div class="skill-box">Python</div></div></div>
-            <div class="slide"><div ><div class="skill-box">JavaScript</div></div></div>
-            <div class="slide"><div ><div class="skill-box">React</div></div></div>
-
-            <div class="slide"><div ><div class="skill-box">HTML</div></div></div>
-            <div class="slide"><div ><div class="skill-box">CSS</div></div></div>
-            <div class="slide"><div ><div class="skill-box">Bootstrap</div></div></div>
-            <div class="slide"><div ><div class="skill-box">Python</div></div></div>
-            <div class="slide"><div ><div class="skill-box">JavaScript</div></div></div>
-            <div class="slide"><div ><div class="skill-box">React</div></div></div>
-
-        </div>
-    </div>
-
-    </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="py-5">
-    <div class="container">
-      <h2 class="text-center head4">Certificates</h2>
-      <div class="row mt-4">
-        <div class="col-lg-4 mb-3">
-          <div class="card shadow-sm">
-            
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037649/SZFI3YWB6K_uzmnpi.png" target="_blank" class="cert-img">View Certificate...</a></h5>
-              <p class="card-text">I have successfully participated in India’s Biggest GenAI Buildathon, organized by NxtWave as part of the OpenAI Academy Learning Community! 🚀
-
-This Generative AI Mastery Workshop gave me an incredible opportunity to:
-✅ Explore the latest advancements in Generative AI
-✅ Build innovative projects with cutting-edge AI tools
-✅ Connect with a community of passionate learners and innovators
-
-A big thanks to NxtWave for creating such a powerful learning platform and helping us shape our journey in AI. 🙌
-
-Excited to continue my journey in AI & Innovation, and looking forward to applying these skills in real-world projects. 💡.</p>
-            </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Technical Skills</h4>
+          <div class="subtle">Front-end development, problem solving, office tools and Python basics.</div>
+          <div style="margin-top:12px">
+            <div class="pill">Front-end</div>
+            <div class="pill">Python</div>
+            <div class="pill">MS Office</div>
+            <div class="pill">Problem Solving</div>
           </div>
         </div>
-        <div class="col-lg-4 mb-3">
-          <div class="card shadow-sm">
-            
-                        <div class="card-body">
-              <h5 class="card-title"><a href="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037621/SUI7D8WI1H_1_-1_uzmcba.png" target="_blank" class="cert-img">View Certificate...</a></h5>
-              <p class="card-text">Generative AI Mastery Workshop — OpenAI Academy x NxtWave
 
-Issued by: NxtWave
-Date: 15 September 2025
-
-Successfully completed the Generative AI Mastery Workshop organized as part of India’s Biggest GenAI Buildathon.
-Gained hands-on experience with Generative AI concepts, tools, and real-world applications, enhancing skills in AI-powered innovation and creativity.</p>
-            </div>
+        <div class="skill-card">
+          <h4>Professional Skills</h4>
+          <div class="subtle">Teamwork, communication, time management, leadership, and analytical thinking.</div>
+          <div style="margin-top:12px">
+            <div class="pill">Teamwork</div><div class="pill">Leadership</div><div class="pill">Communication</div><div class="pill">Time mgmt</div>
           </div>
         </div>
-        <div class="col-lg-4 mb-3">
-          <div class="card shadow-sm">
-            
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037622/HACKELITE.certificate._bvvq1r.jpg" target="_blank" class="cert-img">View Certificate...</a></h5>
-              <p class="card-text">HACKELITE Hackathon — Certificate of Merit
+      </div>
 
-Organized by: SRM Institute of Science and Technology, Chennai
-Date: 14–15 October 2025
+      <!-- language carousel -->
+      <div style="margin-top:18px">
+        <h4 style="margin:0 0 8px">Programming Languages</h4>
+        <div class="lang-scroll" aria-hidden="false">
+          <div class="lang-track" id="langTrack">
+            <!-- duplicated items for smooth loop -->
+            <div class="lang-item">HTML</div>
+            <div class="lang-item">CSS</div>
+            <div class="lang-item">Bootstrap</div>
+            <div class="lang-item">Python</div>
+            <div class="lang-item">JavaScript</div>
+            <div class="lang-item">React</div>
 
-Participated in the HACKELITE Hackathon, conducted by the Developer Network Space Club of the Department of Computer Science and Engineering,
- SRM Institute of Science and Technology.
-Gained practical experience in collaborative software development, innovation,
- and real-world problem solving, enhancing technical and teamwork skills.</p>
-            </div>
+            <div class="lang-item">HTML</div>
+            <div class="lang-item">CSS</div>
+            <div class="lang-item">Bootstrap</div>
+            <div class="lang-item">Python</div>
+            <div class="lang-item">JavaScript</div>
+            <div class="lang-item">React</div>
           </div>
         </div>
-        <div class="col-lg-4 mb-3">
-          <div class="card shadow-sm">
-            
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037614/1756469237224_oryvx8.jpg" target="_blank" class="cert-img">View Certificate...</a></h5>
-              <p class="card-text">Introduction to Artificial Intelligence Certificate
-Issued by Simplilearn SkillUp on August 28, 2025.
-This certificate shows successful completion of an online course in Artificial Intelligence, 
-demonstrating strong initiative and commitment to advancing AI knowledge and career development. 
-It validates my foundational understanding in AI concepts and reflects my dedication to continuous learning in emerging technologies.</p>
-            </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="projects" class="reveal">
+      <h3 class="section-title">Certificates</h3>
+      <div class="subtle">A few certifications and achievements from workshops and hackathons.</div>
+
+      <div class="cards-grid">
+        <!-- Card 1 -->
+        <div class="card">
+          <img class="img" src="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037649/SZFI3YWB6K_uzmnpi.png" alt="certificate 1">
+          <div class="card-body">
+            <h5>GenAI Buildathon — Participation</h5>
+            <p>Participated in India’s Biggest GenAI Buildathon (NxtWave OpenAI Academy). Built projects and learned generative AI workflows.</p>
+            <a class="view-link" href="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037649/SZFI3YWB6K_uzmnpi.png" target="_blank">View Certificate</a>
           </div>
         </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <img class="img" src="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037621/SUI7D8WI1H_1_-1_uzmcba.png" alt="certificate 2">
+          <div class="card-body">
+            <h5>Generative AI Mastery Workshop</h5>
+            <p>Completed the Generative AI Mastery Workshop (OpenAI Academy x NxtWave) — hands-on experience building with modern AI tools.</p>
+            <a class="view-link" href="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037621/SUI7D8WI1H_1_-1_uzmcba.png" target="_blank">View Certificate</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <img class="img" src="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037622/HACKELITE.certificate._bvvq1r.jpg" alt="certificate 3">
+          <div class="card-body">
+            <h5>HACKELITE — Certificate of Merit</h5>
+            <p>Participated in the HACKELITE Hackathon (SRM) — gained practical experience in collaborative software development and problem solving.</p>
+            <a class="view-link" href="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037622/HACKELITE.certificate._bvvq1r.jpg" target="_blank">View Certificate</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+          <img class="img" src="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037614/1756469237224_oryvx8.jpg" alt="certificate 4">
+          <div class="card-body">
+            <h5>Introduction to AI — Simplilearn SkillUp</h5>
+            <p>Completed an introductory AI course on Simplilearn SkillUp — demonstrates a foundation in AI concepts and continuous learning.</p>
+            <a class="view-link" href="https://res.cloudinary.com/dvf6yetek/image/upload/v1761037614/1756469237224_oryvx8.jpg" target="_blank">View Certificate</a>
+          </div>
+        </div>
+
+        <!-- Card 5 (placeholder sample if you want more) -->
         
 
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-10 col-lg-5">
-        
-          <div class="contact-left">
-        <h2>Get in Touch</h2>
-        <p>I'm available for freelance work or new opportunities. If you want to chat about a project or just say hi, feel free to reach out.</p>
-        <p><strong>Email:</strong> shivannagorkal@gmail.com</p>
-        <p><strong>Location:</strong> Mangaluru, India</p>
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <h3 class="section-title">Get in Touch</h3>
+      <div class="subtle">I'm open to projects, internships, and collaborations. Say hi 👋</div>
 
-    </div>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/shivanna-m-590981374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png" class="logo" alt="">
-      </a>
-      <a href="https://www.facebook.com/share/14RkpDc4W45/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_de_Facebook.png" class="logo" alt="">
-      </a>
-      <a href="https://www.instagram.com/mr_simple_star_07?igsh=aXp4MGpmZWk1ZHkw" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" class="logo" alt="">
-      </a>
+      <div class="contact-grid">
+        <div class="contact-left">
+          <h4 style="margin:0 0 8px">Contact Info</h4>
+          <p class="subtle">Email: <strong>shivannagorkal@gmail.com</strong></p>
+          <p class="subtle">Location: <strong>Mangaluru, India</strong></p>
 
-    </div>
+          <div style="margin-top:12px">
+            <h5 style="margin:0 0 8px">Connect</h5>
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/shivanna-m-590981374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png" alt="linkedin">
+              </a>
+              <a href="https://www.facebook.com/share/14RkpDc4W45/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_de_Facebook.png" alt="facebook">
+              </a>
+              <a href="https://www.instagram.com/mr_simple_star_07?igsh=aXp4MGpmZWk1ZHkw" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="instagram">
+              </a>
+            </div>
 
-    <div>
-      <h4 class="head5">My resume.</h4>
-        <a href="">
-          <p class="para">View my resume...</p>
-        </a>
-    </div>
+            <div style="margin-top:14px">
+              <a class="pill" href="#" style="text-decoration:none">View my resume...</a>
+            </div>
+          </div>
+        </div>
 
-    </div>
-    <div class="col-10 col-lg-5">
-    <div class="contact-right">
-        <form action="#" method="POST">
+        <div class="contact-right">
+          <form id="contactForm" onsubmit="return false;">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-            
-            <button type="submit" class="cta-button">Send Message</button>
-        </form>
-    </div>
-    </div>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or say hi!" required></textarea>
 
-  </div>
-    </div>
+            <button class="submit-btn" id="submitBtn">Send Message</button>
+            <p id="formMsg" style="margin-top:8px;font-size:.9rem;color:var(--muted);display:none"></p>
+          </form>
+        </div>
+      </div>
+    </section>
 
-</section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-center text-white py-3">
-    <p>© 2025 Shivanna. All rights reserved.</p>
+  <footer>
+    © 2025 Shivanna — Made with ❤️ and curiosity.
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
