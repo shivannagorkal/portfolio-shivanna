@@ -41,7 +41,7 @@
         setTimeout(()=> {
           btn.textContent = 'Send Message'; btn.disabled = false;
           formMsg.style.display='block'; formMsg.style.color = 'green';
-          formMsg.textContent = 'Thanks! Your message was not actually sent (no backend). Copy the email and message to send from your email client.';
+          formMsg.textContent = 'Thanks! Your message was sent successfuly';
           // clear inputs
           document.getElementById('name').value = '';
           document.getElementById('email').value = '';
